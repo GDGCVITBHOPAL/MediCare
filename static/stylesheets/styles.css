@@ -2,16 +2,34 @@ body {
     background-color: whitesmoke;
     text-align: center;
     font-family: 'Cabin', sans-serif;
+    width: 100vw;
+    font-family: Lato;
+    font-style: normal;     
 }
 
 .card {
-    margin-top: 50px;
+    margin: 25px 0;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #DA4415;
 }
 
 .card-body {
-    /* background-color: black; */
     color: black;
     font-weight: bolder;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.card-body>.btn-hgh{
+    background: #FFFFFF;
+    border: 2px solid #2E8D7F;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .card:hover {
@@ -47,13 +65,30 @@ body {
     bottom: 0;
     height: 50px;
     width: 100%;
-    background-color: rgb(228, 222, 222);
+    /* background-color: rgb(228, 222, 222); */
+    background-color: transparent;
     color: black;
     text-align: center;
 }
 
+.footer>.divider{
+    font-weight: 900;
+    font-size: 30px;
+    padding: 1px;
+    margin: 0 10%;
+    line-height: 36px;
+    background-color: #2E8D7F;
+    box-shadow: 9px 8px 7px rgba(0, 0, 0, 0.25);
+}
+
 .footer-text {
     padding-top: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2E8D7F;
 }
 
 /* Disease Predictor styling */
@@ -72,6 +107,12 @@ body {
     left: 46.5%;
 }
 
+.active{
+    border: 2px solid #2E8D7F;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 16px #2E8D7F);
+    border-radius: 15px;
+}
 
 .img-preview {
     width: 256px;
@@ -153,3 +194,46 @@ input[type="file"] {
     font-weight: bold;
 }
 
+#homebody{
+    background-image: url(../bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#navbar-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+@media screen and (max-width:650px) {
+    .flexbox{
+        flex-direction: column;
+    }
+}
+
+.description-text{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.description-subText{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
