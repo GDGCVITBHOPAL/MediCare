@@ -1,10 +1,28 @@
 body {
     background-color: whitesmoke;
     text-align: center;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Lato', sans-serif;
     width: 100vw;
     font-family: Lato;
     font-style: normal;     
+}
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #3bc0ac !important;
+    text-shadow: 9px 8px 7px rgba(0, 0, 0, 0.25);
+}
+
+.nav-item{
+    margin: 0 2rem;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.show{
+    display: block;
 }
 
 .card {
@@ -55,17 +73,10 @@ body {
     margin-top: 350px;
 }
 
-.description {
-    margin-top: 100px;
-}
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     height: 50px;
     width: 100%;
-    /* background-color: rgb(228, 222, 222); */
     background-color: transparent;
     color: black;
     text-align: center;
@@ -83,12 +94,11 @@ body {
 
 .footer-text {
     padding-top: 15px;
-    font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #2E8D7F;
+    color: #3c8b80;
 }
 
 /* Disease Predictor styling */
@@ -184,6 +194,7 @@ input[type="file"] {
     }
 }
 
+
 #disease-image {
     width: 350px;
     height: 50rem;
@@ -202,8 +213,13 @@ input[type="file"] {
 
 #navbar-main {
     display: flex;
+    justify-content: center;
+}
+
+#navbarNav {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .flexbox{
@@ -223,6 +239,15 @@ input[type="file"] {
 @media screen and (max-width:650px) {
     .flexbox{
         flex-direction: column;
+    }
+    
+    #navbarNav {
+        margin: 1rem 0;
+        justify-content: center;
+    }
+    
+    .collapse:not(.show) {
+        display: none !important;
     }
 }
 
