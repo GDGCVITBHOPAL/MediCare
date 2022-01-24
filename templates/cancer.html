@@ -11,12 +11,16 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS File -->
     <link rel="stylesheet" href="../static/stylesheets/styles.css">
+    <!-- Font Attachments -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid" style="width:90%">
             <a class="navbar-brand" href="{{ url_for('home') }}">MediCare</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,16 +46,16 @@
     </nav>
 
     <!-- Input Form -->
-    <div class="container">
+    <div class="container bordering">
         <form action="{{ url_for('bc_prediction') }}" method="post">
 
             <div class="row">
                 <!-- Input for Nitrogen -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Mean Concave Points</h5>
-                            <input type="number" name="cpm" placeholder="" id="nitrogen-input"
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Mean Concave Points</h5>
+                            <input type="number" name="cpm" placeholder="Mean Concave Points" id="nitrogen-input"
                                 required="required">
                         </div>
                     </div>
@@ -59,26 +63,23 @@
 
                 <!-- Input for Phosphorus -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Mean Area</h5>
-                            <input type="number" name="area" placeholder=""
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Mean Area</h5>
+                            <input type="number" name="area" placeholder="Mean Area"
                                 id="phosphorus-input" required="required">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <br>
-
             <div class="row">
                 <!-- Input for Potassium -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Mean Radius</h5>
-                            <input type="number" name="radius" placeholder="" id="potassium-input"
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Mean Radius</h5>
+                            <input type="number" name="radius" placeholder="Mean Radius" id="potassium-input"
                                 required="required">
                         </div>
                     </div>
@@ -86,53 +87,41 @@
 
                 <!-- Input for Temperature -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Mean Perimeter</h5>
-                            <input type="number" name="perimeter" placeholder="" id="temperature-input"
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Mean Radius</h5>
+                            <input type="number" name="perimeter" placeholder="Mean Radius" id="temperature-input"
                                 required="required">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <br>
-
             <div class="row">
                 <!-- Input for Humidity -->
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Mean Concavity</h5>
-                            <input type="number" name="concavity" placeholder=""
+                <div class="col-sm-6">
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Mean Concavity</h5>
+                            <input type="number" name="concavity" placeholder="Mean Concavity"
                                 id="humidity-input" required="required">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <br>
-
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn btn btn-dark btn-lg">Predict</button>
-            <br>
-            <div class="container" id="small-text">
-                <small id="inputHelp" class="form-text">The information you enter in this site is never
-                    stored.</small>
-            </div>
+            <button type="submit" class="submit-btn btn btn-dark btn-lg btn-size">Predict</button>
         </form>
-
-        <br>
-        <br>
-        <br>
-
         <!-- <h3>{{ prediction_text }}</h3> -->
     </div>
 
     <footer class="footer">
-        <p class="footer-text">AgriGenie, Copyright &copy; 2021</p>
+        <div class="container" id="small-text">
+            <small id="inputHelp" class="form-text">The information you enter in this site is never
+                stored.</small>
+        </div>
+        <p class="footer-text">MediCare, Copyright &copy; 2021</p>
     </footer>
 
 

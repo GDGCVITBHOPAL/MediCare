@@ -1,12 +1,37 @@
+/* Tag styles */
 body {
     background-color: whitesmoke;
     text-align: center;
     font-family: 'Lato', sans-serif;
     width: 100vw;
     font-family: Lato;
-    font-style: normal;     
+    font-style: normal;   
+    overflow-x: hidden;  
 }
 
+input{
+    background: #FFFFFF;
+    border: 2px solid #2E8D7F;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 0.3rem 1rem;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Class Styles */
 .navbar-brand {
     font-weight: 900;
     font-size: 30px;
@@ -184,6 +209,70 @@ input[type="file"] {
     animation: spin 1s linear infinite;
 }
 
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.description-text{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.description-subText{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.bordering{
+    border: 4px solid #2E8D7F;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding:0 3rem;
+}
+
+.card-body-inp{
+    background: #FFFFFF;
+    border: 1px solid #B8B8B8;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.card-title-inp{
+    background: #FFFEFE;
+    border: 1px solid #D3D3D3;
+    box-sizing: border-box;
+    box-shadow: 0px 7px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 0.4rem 0;
+    width: 100%;
+}
+
+.card-inp{
+    border: 0px;
+    margin-left: 2rem ;
+    margin-right: 2rem;
+}
+
+.btn-size{
+    width:50%;
+}
+
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -194,6 +283,7 @@ input[type="file"] {
     }
 }
 
+ /* ID tag styles */
 
 #disease-image {
     width: 350px;
@@ -222,20 +312,6 @@ input[type="file"] {
     justify-content: flex-end;
 }
 
-.flexbox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.flexbox-vertical{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-
 @media screen and (max-width:650px) {
     .flexbox{
         flex-direction: column;
@@ -249,16 +325,8 @@ input[type="file"] {
     .collapse:not(.show) {
         display: none !important;
     }
-}
 
-.description-text{
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 77px;
-}
-
-.description-subText{
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
+    .bordering{
+        padding:0 1rem;
+    }   
 }

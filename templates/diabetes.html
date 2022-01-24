@@ -11,12 +11,16 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS File -->
     <link rel="stylesheet" href="../static/stylesheets/styles.css">
+    <!-- Font Attachments -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid" style="width:90%">
             <a class="navbar-brand" href="{{ url_for('home') }}">MediCare</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,15 +46,15 @@
     </nav>
 
     <!-- Input Form -->
-    <div class="container">
+    <div class="container bordering">
         <form action="{{ url_for('db_prediction') }}" method="post">
 
             <div class="row">
                 <!-- Input for Nitrogen -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pregnancies</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Pregnancies</h5>
                             <input type="number" name="pregnancies" placeholder="Number of pregnancies" id="nitrogen-input"
                                 required="required">
                         </div>
@@ -59,9 +63,9 @@
 
                 <!-- Input for Phosphorus -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Glucose</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Glucose</h5>
                             <input type="number" name="glucose" placeholder="Glucose Level"
                                 id="phosphorus-input" required="required">
                         </div>
@@ -69,15 +73,12 @@
                 </div>
             </div>
 
-            <br>
-            <br>
-
             <div class="row">
                 <!-- Input for Potassium -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Blood Pressure</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Blood Pressure</h5>
                             <input type="number" name="bp" placeholder="BP Level" id="potassium-input"
                                 required="required">
                         </div>
@@ -86,9 +87,9 @@
 
                 <!-- Input for Temperature -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Skin Thickness</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Skin Thickness</h5>
                             <input type="number" name="skin_thickness" placeholder="In mm" id="temperature-input"
                                 required="required">
                         </div>
@@ -96,15 +97,12 @@
                 </div>
             </div>
 
-            <br>
-            <br>
-
             <div class="row">
                 <!-- Input for Humidity -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Insulin</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Insulin</h5>
                             <input type="number" name="insulin" placeholder="Insulin level"
                                 id="humidity-input" required="required">
                         </div>
@@ -113,9 +111,9 @@
 
                 <!-- Input for Temperature -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">BMI</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">BMI</h5>
                             <input type="number" name="bmi" placeholder="BMI" id="ph-input"
                                 required="required">
                         </div>
@@ -123,17 +121,14 @@
                 </div>
             </div>
 
-            <br>
-            <br>
-
             <div class="row">
                 <!-- Input for Humidity -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Diabetes Pedigree Function</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Diabetes Pedigree Function</h5>
                             <!-- (a function which scores likelihood of diabetes based on family history) -->
-                            <input type="number" name="dpf" placeholder=""
+                            <input type="number" name="dpf" placeholder="Diabetes Pedigree Function"
                                 id="humidity-input" required="required">
                         </div>
                     </div>
@@ -141,37 +136,30 @@
 
                 <!-- Input for Temperature -->
                 <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Age</h5>
+                    <div class="card card-inp">
+                        <div class="card-body card-body-inp">
+                            <h5 class="card-title card-title-inp">Age</h5>
                             <input type="number" name="ph-level" placeholder="Age of the patient" id="ph-input"
                                 required="required">
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <br>
-            <br>
-
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn btn btn-dark btn-lg">Predict</button>
+            <button type="submit" class="submit-btn btn btn-dark btn-lg btn-size">Predict</button>
             <br>
-            <div class="container" id="small-text">
-                <small id="inputHelp" class="form-text">The information you enter in this site is never
-                    stored.</small>
-            </div>
         </form>
-
-        <br>
-        <br>
-        <br>
-
         <!-- <h3>{{ prediction_text }}</h3> -->
     </div>
 
     <footer class="footer">
-        <p class="footer-text">AgriGenie, Copyright &copy; 2021</p>
+        <div class="container" id="small-text">
+            <small id="inputHelp" class="form-text">The information you enter in this site is never
+                stored.</small>
+        </div>
+        <p class="footer-text">MediCare, Copyright &copy; 2021</p>
     </footer>
 
 
