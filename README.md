@@ -31,3 +31,6 @@ For this application, we used these datasets from Kaggle:
 * To add your own models and prediction, follow this [comprehensive guide](https://medium.com/dsc-vit-bhopal/deployment-of-ml-models-using-flask-jackson-jacob-6459f4e7c526). In case of any doubts, feel free to reach us on our Discord server.
 
 # Demo
+<div align="center">
+  <img src="https://github.com/DSCVITBHOPAL/MediCare/blob/main/utils/medicare-2.gif" width="100%">
+</div>
