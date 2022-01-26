@@ -1,17 +1,78 @@
+/* Tag styles */
 body {
     background-color: whitesmoke;
     text-align: center;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Lato', sans-serif;
+    width: 100vw;
+    font-family: Lato;
+    font-style: normal;   
+    overflow-x: hidden;  
+}
+
+input{
+    background: #FFFFFF;
+    border: 2px solid #2E8D7F;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 0.3rem 1rem;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Class Styles */
+.navbar-brand {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #3bc0ac !important;
+    text-shadow: 9px 8px 7px rgba(0, 0, 0, 0.25);
+}
+
+.nav-item{
+    margin: 0 2rem;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.show{
+    display: block;
 }
 
 .card {
-    margin-top: 50px;
+    margin: 25px 0;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #DA4415;
 }
 
 .card-body {
-    /* background-color: black; */
     color: black;
     font-weight: bolder;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.card-body>.btn-hgh{
+    background: #FFFFFF;
+    border: 2px solid #2E8D7F;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .card:hover {
@@ -37,23 +98,32 @@ body {
     margin-top: 350px;
 }
 
-.description {
-    margin-top: 100px;
-}
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     height: 50px;
     width: 100%;
-    background-color: rgb(228, 222, 222);
+    background-color: transparent;
     color: black;
     text-align: center;
 }
 
+.footer>.divider{
+    font-weight: 900;
+    font-size: 30px;
+    padding: 1px;
+    margin: 0 10%;
+    line-height: 36px;
+    background-color: #2E8D7F;
+    box-shadow: 9px 8px 7px rgba(0, 0, 0, 0.25);
+}
+
 .footer-text {
     padding-top: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3c8b80;
 }
 
 /* Disease Predictor styling */
@@ -72,6 +142,12 @@ body {
     left: 46.5%;
 }
 
+.active{
+    border: 2px solid #2E8D7F;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 16px #2E8D7F);
+    border-radius: 15px;
+}
 
 .img-preview {
     width: 256px;
@@ -133,6 +209,70 @@ input[type="file"] {
     animation: spin 1s linear infinite;
 }
 
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.description-text{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.description-subText{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.bordering{
+    border: 4px solid #2E8D7F;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding:0 3rem;
+}
+
+.card-body-inp{
+    background: #FFFFFF;
+    border: 1px solid #B8B8B8;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.card-title-inp{
+    background: #FFFEFE;
+    border: 1px solid #D3D3D3;
+    box-sizing: border-box;
+    box-shadow: 0px 7px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 0.4rem 0;
+    width: 100%;
+}
+
+.card-inp{
+    border: 0px;
+    margin-left: 2rem ;
+    margin-right: 2rem;
+}
+
+.btn-size{
+    width:50%;
+}
+
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -142,6 +282,8 @@ input[type="file"] {
         transform: rotate(360deg);
     }
 }
+
+ /* ID tag styles */
 
 #disease-image {
     width: 350px;
@@ -153,3 +295,38 @@ input[type="file"] {
     font-weight: bold;
 }
 
+#homebody{
+    background-image: url(../bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#navbar-main {
+    display: flex;
+    justify-content: center;
+}
+
+#navbarNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width:650px) {
+    .flexbox{
+        flex-direction: column;
+    }
+    
+    #navbarNav {
+        margin: 1rem 0;
+        justify-content: center;
+    }
+    
+    .collapse:not(.show) {
+        display: none !important;
+    }
+
+    .bordering{
+        padding:0 1rem;
+    }   
+}
