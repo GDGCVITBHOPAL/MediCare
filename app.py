@@ -25,7 +25,7 @@ modelCV = load_model(modelPath)
 # Creating function for predicting from our model:
 def model_predict(img_path, model):
     print(img_path)
-    img = image.load_img(img_path, target_size = (224, 224))
+    img = image.load_img(img_path, target_size = (128, 128))
     
     # Preprocessing the image:
     x = image.img_to_array(img)
@@ -122,6 +122,7 @@ def upload():
         result = prediction
         return result
     return None
+
 
 if __name__ == '__main__':
     app.run(debug=True)
